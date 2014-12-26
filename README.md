@@ -1,6 +1,9 @@
 Userlinks for Flussonic
 =======================
 
+##WARNING: NOW CAN'T BE USED, IT'S JUST INITIAL COMMITS
+
+
 ###How to run
 
 1. Install Java 8 JDK and Maven 3
@@ -8,7 +11,7 @@ Userlinks for Flussonic
 3. mvn jetty:run
 4. open in browser: http://localhost:9999
 
-###Lincense
+###License
 
 Apache License 2.0. See LICENSE, LICENSE-2.0, NOTICE.
 In other words, yes, you can use it for your commercial purposes.
@@ -31,4 +34,4 @@ Web design theme is "SB Admin 2":
 * Spring and Hibernate are established Java standards. Both Apache 2.0 License.
 * Spring Security is out of the box security implementation (and Wicket native implementation is not good at all). Apache 2.0 License.
 * SQLite is the only popular embedded database with good license (not GPL and AGPL). License - no license, public domain. JDBC connector is under Apache 2.0 License.
-* SB Admin 3 is light theme based on Bootstrap 3 and designed in LESS. Apache 2.0 License.
+* SB Admin 3 is a light theme based on Bootstrap 3 and designed in LESS and CSS. Apache 2.0 License.
