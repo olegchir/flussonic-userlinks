@@ -5,7 +5,6 @@ package com.olegchir.flussonic_userlinks.init;
  * see LICENSE-2.0.txt, LICENSE (it's a copy of LICENSE-2.0.txt) and NOTICE for additional information.
  */
 
-
 import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.web.filter.OncePerRequestFilter;
 
@@ -29,6 +28,12 @@ public final class CsrfTokenFilter extends OncePerRequestFilter {
         //http://docs.spring.io/spring-security/site/docs/3.2.0.CI-SNAPSHOT/reference/html/csrf.html
         //And this discussion about Tymeleaf:
         //http://stackoverflow.com/questions/23669424/cant-create-csrf-token-with-spring-security
+
+        //This changes should be applied only for Wicket Pages
+        if (!MountedPages.getInstance().containsPathPrefix(request.getServletPath())) {
+            filterChain.doFilter(request, response);
+            return;
+        }
 
         //Set HTTP Headers
         CsrfToken token = (CsrfToken) request.getAttribute("_csrf");

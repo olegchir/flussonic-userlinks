@@ -38,8 +38,7 @@ Web design theme is "SB Admin 2":
 
 ###Notes for developers
 
-Static files from src/main/webapps cannot be properly served by Jetty (a bug?),
-so if you want to run this app on your local Jetty (eg for debugging the source in IntelliJ IDEA),
-you should place contrib/theme.xml to your $JETTY_HOME/webapps, and fix webapp name (replace flussonic-userlinks-1 with proper webapp name).
-
+Treating everything inside src/main/webapp/theme a static resource may be good performance improvement.
 For mvn jetty:run this hack is already added to pom.xml and will be applied automatically.
+If you want to run this hack on your local Jetty (eg for debugging the source in IntelliJ IDEA),
+you may place contrib/theme.xml to your $JETTY_HOME/webapps, and fix webapp name (replace flussonic-userlinks-1 with proper webapp name).

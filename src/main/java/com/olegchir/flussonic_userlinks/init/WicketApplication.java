@@ -9,6 +9,9 @@ import com.olegchir.flussonic_userlinks.page.HomePage.HomePage;
 import com.olegchir.flussonic_userlinks.page.LoginPage.LoginPage;
 import com.olegchir.flussonic_userlinks.page.LogoutPage.LogoutSuccessPage;
 import com.olegchir.flussonic_userlinks.page.UsersPage.UsersPage;
+import org.apache.wicket.Application;
+import org.apache.wicket.Page;
+import org.apache.wicket.WicketRuntimeException;
 import org.apache.wicket.authroles.authentication.AbstractAuthenticatedWebSession;
 import org.apache.wicket.authroles.authentication.AuthenticatedWebApplication;
 import org.apache.wicket.authroles.authorization.strategies.role.annotations.AnnotationsRoleAuthorizationStrategy;
@@ -38,10 +41,15 @@ public class WicketApplication extends AuthenticatedWebApplication  {
         super.init();
         getComponentInstantiationListeners().add(new SpringComponentInjector(this));
         getSecuritySettings().setAuthorizationStrategy(new AnnotationsRoleAuthorizationStrategy(this));
-        mountPage("/login", LoginPage.class);
-        mountPage("/logout_success", LogoutSuccessPage.class);
-        mountPage("/home", HomePage.class);
-        mountPage("/users", UsersPage.class);
+        usePage("/login", LoginPage.class);
+        usePage("/logout_success", LogoutSuccessPage.class);
+        usePage("/home", HomePage.class);
+        usePage("/users", UsersPage.class);
+    }
+
+    public <T extends Page> void usePage(String path, final Class<T> pageClass) {
+        mountPage(path, pageClass);
+        MountedPages.getInstance().add(path, pageClass);
     }
 
     @Override
@@ -53,4 +61,5 @@ public class WicketApplication extends AuthenticatedWebApplication  {
     protected Class<? extends WebPage> getSignInPageClass() {
         return LoginPage.class;
     }
+
 }
