@@ -35,3 +35,11 @@ Web design theme is "SB Admin 2":
 * Spring Security is out of the box security implementation (and Wicket native implementation is not good at all). Apache 2.0 License.
 * SQLite is the only popular embedded database with good license (not GPL and AGPL). License - no license, public domain. JDBC connector is under Apache 2.0 License.
 * SB Admin 3 is a light theme based on Bootstrap 3 and designed in LESS and CSS. Apache 2.0 License.
+
+###Notes for developers
+
+Static files from src/main/webapps cannot be properly served by Jetty (a bug?),
+so if you want to run this app on your local Jetty (eg for debugging the source in IntelliJ IDEA),
+you should place contrib/theme.xml to your $JETTY_HOME/webapps, and fix webapp name (replace flussonic-userlinks-1 with proper webapp name).
+
+For mvn jetty:run this hack is already added to pom.xml and will be applied automatically.
