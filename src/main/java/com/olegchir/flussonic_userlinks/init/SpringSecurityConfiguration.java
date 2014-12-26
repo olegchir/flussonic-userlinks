@@ -29,6 +29,7 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
             .addFilterAfter(new CsrfTokenFilter(), CsrfFilter.class)
             .formLogin()
                 .loginPage("/login")
+                .failureUrl("/login_failed")
                 .permitAll()
                 .and()
             .logout()

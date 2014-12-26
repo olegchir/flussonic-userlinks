@@ -6,6 +6,7 @@ package com.olegchir.flussonic_userlinks.init;
  */
 import com.olegchir.flussonic_userlinks.page.BodyPage.BodyPage;
 import com.olegchir.flussonic_userlinks.page.HomePage.HomePage;
+import com.olegchir.flussonic_userlinks.page.LoginPage.LoginFailedPage;
 import com.olegchir.flussonic_userlinks.page.LoginPage.LoginPage;
 import com.olegchir.flussonic_userlinks.page.LogoutPage.LogoutSuccessPage;
 import com.olegchir.flussonic_userlinks.page.UsersPage.UsersPage;
@@ -42,6 +43,7 @@ public class WicketApplication extends AuthenticatedWebApplication  {
         getComponentInstantiationListeners().add(new SpringComponentInjector(this));
         getSecuritySettings().setAuthorizationStrategy(new AnnotationsRoleAuthorizationStrategy(this));
         usePage("/login", LoginPage.class);
+        usePage("/login_failed", LoginFailedPage.class);
         usePage("/logout_success", LogoutSuccessPage.class);
         usePage("/home", HomePage.class);
         usePage("/users", UsersPage.class);
