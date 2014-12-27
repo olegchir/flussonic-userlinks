@@ -9,6 +9,7 @@ package com.olegchir.flussonic_userlinks.init;
 /**
  * Created by olegchir on 25.12.14.
  */
+import com.olegchir.flussonic_userlinks.helpers.AuthChecker;
 import org.apache.wicket.authroles.authentication.AuthenticatedWebSession;
 import org.apache.wicket.authroles.authorization.strategies.role.Roles;
 import org.apache.wicket.request.Request;
@@ -26,11 +27,6 @@ public class UserAuthenticatedWebSession extends AuthenticatedWebSession {
     }
     @Override
     public Roles getRoles() {
-        Roles roles = new Roles();
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        for (GrantedAuthority authority : authentication.getAuthorities()) {
-            roles.add(authority.getAuthority());
-        }
-        return roles;
+        return AuthChecker.extractRoles();
     }
 }

@@ -28,7 +28,7 @@ import javax.persistence.Persistence;
 public class AdminDashboardPage extends BodyPage {
     public AdminDashboardPage(PageParameters params) {
         super(params);
-        testDatabase();
+        //testDatabase();
     }
 
     private void testDatabase() {
