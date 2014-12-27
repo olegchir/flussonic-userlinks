@@ -10,7 +10,7 @@ import com.olegchir.flussonic_userlinks.page.BasePage.BasePage;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 
 /**
- * Created by olegchir on 25.12.14.
+ * Created by olegchir on 25.12.14.d
  */
 public class LoginFailedPage extends BasePage {
     public LoginFailedPage(PageParameters params) {
