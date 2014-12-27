@@ -6,6 +6,8 @@ package com.olegchir.flussonic_userlinks.panels.AdminDashboardPanel;
  */
 import com.olegchir.flussonic_userlinks.auth.AuthorizeViewContentOnlyFor;
 import com.olegchir.flussonic_userlinks.panels.BasePanel.BasePanel;
+import org.apache.wicket.markup.html.basic.Label;
+import org.apache.wicket.model.Model;
 
 
 /**
@@ -15,5 +17,6 @@ import com.olegchir.flussonic_userlinks.panels.BasePanel.BasePanel;
 public class AdminDashboardPanel extends BasePanel {
     public AdminDashboardPanel(String id) {
         super(id);
+        add(new Label("replaceme", new Model<String>("some replaced text")));
     }
 }
