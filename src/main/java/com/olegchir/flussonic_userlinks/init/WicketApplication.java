@@ -6,6 +6,7 @@ package com.olegchir.flussonic_userlinks.init;
  */
 import com.olegchir.flussonic_userlinks.page.AdminDashboardPage.AdminDashboardPage;
 import com.olegchir.flussonic_userlinks.page.BodyPage.BodyPage;
+import com.olegchir.flussonic_userlinks.page.DashboardPage.DashboardPage;
 import com.olegchir.flussonic_userlinks.page.HomePage.HomePage;
 import com.olegchir.flussonic_userlinks.page.LoginPage.LoginFailedPage;
 import com.olegchir.flussonic_userlinks.page.LoginPage.LoginPage;
@@ -48,6 +49,7 @@ public class WicketApplication extends AuthenticatedWebApplication  {
         usePage("/logout_success", LogoutSuccessPage.class);
         usePage("/home", HomePage.class);
         usePage("/admin_dashboard", AdminDashboardPage.class);
+        usePage("/dashboard", DashboardPage.class);
         usePage("/users", UsersPage.class);
     }
 

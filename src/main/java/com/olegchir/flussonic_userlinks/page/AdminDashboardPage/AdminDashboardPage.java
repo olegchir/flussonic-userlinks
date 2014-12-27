@@ -17,7 +17,7 @@ import org.apache.wicket.request.mapper.parameter.PageParameters;
  */
 
 @SuppressWarnings("serial")
-@AuthorizeInstantiation("ROLE_USER")
+@AuthorizeInstantiation("ROLE_ADMIN")
 public class AdminDashboardPage extends BodyPage {
     public AdminDashboardPage(PageParameters params) {
         super(params);

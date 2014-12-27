@@ -30,6 +30,7 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
             .formLogin()
                 .loginPage("/login")
                 .failureUrl("/login_failed")
+                .successHandler(new AuthSuccessHandler())
                 .permitAll()
                 .and()
             .logout()
@@ -51,8 +52,12 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth
                 .inMemoryAuthentication()
-                .withUser("testuser")
-                .password("password")
-                .roles("USER");
+                    .withUser("admin")
+                    .password("123")
+                    .roles("ADMIN","USER")
+                .and()
+                    .withUser("user")
+                    .password("123")
+                    .roles("USER");
     }
 }
