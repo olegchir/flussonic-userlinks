@@ -1,4 +1,4 @@
-package com.olegchir.flussonic_userlinks.page.AdminDashboardPage;
+package com.olegchir.flussonic_userlinks.page.DashboardPage;
 /**
  * Copyright (C) 2014 Oleg Chirukhin
  * Licensed under the Apache License 2.0,
@@ -6,7 +6,7 @@ package com.olegchir.flussonic_userlinks.page.AdminDashboardPage;
  */
 
 import com.olegchir.flussonic_userlinks.page.BodyPage.BodyPage;
-import com.olegchir.flussonic_userlinks.panels.AdminDashboardPanel.AdminDashboardPanel;
+import com.olegchir.flussonic_userlinks.panels.DashboardPanel.DashboardPanel;
 import com.olegchir.flussonic_userlinks.panels.HomePanel.HomePanel;
 import org.apache.wicket.authroles.authorization.strategies.role.annotations.AuthorizeInstantiation;
 import org.apache.wicket.markup.html.panel.Panel;
@@ -18,13 +18,13 @@ import org.apache.wicket.request.mapper.parameter.PageParameters;
 
 @SuppressWarnings("serial")
 @AuthorizeInstantiation("ROLE_USER")
-public class AdminDashboardPage extends BodyPage {
-    public AdminDashboardPage(PageParameters params) {
+public class DashboardPage extends BodyPage {
+    public DashboardPage(PageParameters params) {
         super(params);
     }
 
     @Override
     public Panel getContentPanel() {
-        return new AdminDashboardPanel(getNameContentPanel());
+        return new DashboardPanel(getNameContentPanel());
     }
 }
