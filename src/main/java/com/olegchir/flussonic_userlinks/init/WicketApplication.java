@@ -5,16 +5,13 @@ package com.olegchir.flussonic_userlinks.init;
  * see LICENSE-2.0.txt, LICENSE (it's a copy of LICENSE-2.0.txt) and NOTICE for additional information.
  */
 import com.olegchir.flussonic_userlinks.page.AdminDashboardPage.AdminDashboardPage;
-import com.olegchir.flussonic_userlinks.page.BodyPage.BodyPage;
 import com.olegchir.flussonic_userlinks.page.DashboardPage.DashboardPage;
 import com.olegchir.flussonic_userlinks.page.HomePage.HomePage;
 import com.olegchir.flussonic_userlinks.page.LoginPage.LoginFailedPage;
 import com.olegchir.flussonic_userlinks.page.LoginPage.LoginPage;
 import com.olegchir.flussonic_userlinks.page.LogoutPage.LogoutSuccessPage;
-import com.olegchir.flussonic_userlinks.page.UsersPage.UsersPage;
-import org.apache.wicket.Application;
+import com.olegchir.flussonic_userlinks.page.UserManagementPage.UserManagementPage;
 import org.apache.wicket.Page;
-import org.apache.wicket.WicketRuntimeException;
 import org.apache.wicket.authroles.authentication.AbstractAuthenticatedWebSession;
 import org.apache.wicket.authroles.authentication.AuthenticatedWebApplication;
 import org.apache.wicket.authroles.authorization.strategies.role.annotations.AnnotationsRoleAuthorizationStrategy;
@@ -56,7 +53,7 @@ public class WicketApplication extends AuthenticatedWebApplication  {
         usePage("/home", HomePage.class);
         usePage("/admin_dashboard", AdminDashboardPage.class);
         usePage("/dashboard", DashboardPage.class);
-        usePage("/users", UsersPage.class);
+        usePage("/user_management", UserManagementPage.class);
     }
 
     public <T extends Page> void usePage(String path, final Class<T> pageClass) {
