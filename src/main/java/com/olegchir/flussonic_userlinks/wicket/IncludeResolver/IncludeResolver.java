@@ -361,7 +361,7 @@ public class IncludeResolver implements IComponentResolver {
                         Component comp = this.getParent().get(id);
                         if (comp != null) {
                             children.put(id, this.getRenderedResponseString(markupStream, comp));
-                            markupStream.next();
+//                            markupStream.next();
                         } else {
                             markupStream.next();
                         }
@@ -393,8 +393,8 @@ public class IncludeResolver implements IComponentResolver {
 
             try {
                 this.getRequestCycle().setResponse(response);
-                comp.setMarkup(markupStream.getMarkupFragment());
                 comp.render();
+                markupStream.skipComponent();
             } finally {
                 this.getRequestCycle().setResponse(webResponse);
             }
