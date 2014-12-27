@@ -12,11 +12,13 @@ import com.olegchir.flussonic_userlinks.page.LoginPage.LoginPage;
 import com.olegchir.flussonic_userlinks.page.LogoutPage.LogoutSuccessPage;
 import com.olegchir.flussonic_userlinks.page.UserManagementPage.UserManagementPage;
 import com.olegchir.flussonic_userlinks.wicket.IncludeResolver.IncludeResolver;
+import com.olegchir.flussonic_userlinks.wicket.SecurityResolver.SecurityResolver;
 import org.apache.wicket.Page;
 import org.apache.wicket.authroles.authentication.AbstractAuthenticatedWebSession;
 import org.apache.wicket.authroles.authentication.AuthenticatedWebApplication;
 import org.apache.wicket.authroles.authorization.strategies.role.annotations.AnnotationsRoleAuthorizationStrategy;
 import org.apache.wicket.markup.html.WebPage;
+import org.apache.wicket.markup.parser.filter.WicketTagIdentifier;
 import org.apache.wicket.settings.PageSettings;
 import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
 
@@ -59,6 +61,7 @@ public class WicketApplication extends AuthenticatedWebApplication  {
 
         PageSettings pageSettings = getPageSettings();
         pageSettings.addComponentResolver(new IncludeResolver());
+        pageSettings.addComponentResolver(new SecurityResolver());
     }
 
     public <T extends Page> void usePage(String path, final Class<T> pageClass) {
