@@ -7,16 +7,14 @@ package com.olegchir.flussonic_userlinks.page.LoginPage;
 
 
 import com.olegchir.flussonic_userlinks.page.BasePage.BasePage;
+import com.olegchir.flussonic_userlinks.panels.NotificationPanel.NotificationPanelType;
 import org.apache.wicket.protocol.http.servlet.ServletWebRequest;
 import org.apache.wicket.request.Request;
 import org.apache.wicket.request.cycle.RequestCycle;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 import org.springframework.security.core.AuthenticationException;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.WebAttributes;
 
-import javax.security.auth.login.CredentialException;
-import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.web.util.WebUtils;
 
 /**
@@ -33,11 +31,12 @@ public class LoginPage extends BasePage {
                 WebAttributes.AUTHENTICATION_EXCEPTION
         );
 
+        String authMessage = "";
+        boolean authVisible = false;
         if (null!= lastException && AuthenticationException.class.isAssignableFrom(lastException.getClass())) {
-            String message = ((AuthenticationException)lastException).getLocalizedMessage();
-            displayErrorMessage("notification", message, true);
-        } else {
-            displayErrorMessage("notification", "Login error", false);
+            authMessage = ((AuthenticationException)lastException).getLocalizedMessage();
+            authVisible = true;
         }
+        addNotificationPanel("notification", authVisible, authMessage, NotificationPanelType.DANGER);
     }
 }
