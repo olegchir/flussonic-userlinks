@@ -4,6 +4,7 @@ package com.olegchir.flussonic_userlinks.init;
  * Licensed under the Apache License 2.0,
  * see LICENSE-2.0.txt, LICENSE (it's a copy of LICENSE-2.0.txt) and NOTICE for additional information.
  */
+import com.olegchir.flussonic_userlinks.page.AdminDashboardPage.AdminDashboardPage;
 import com.olegchir.flussonic_userlinks.page.BodyPage.BodyPage;
 import com.olegchir.flussonic_userlinks.page.HomePage.HomePage;
 import com.olegchir.flussonic_userlinks.page.LoginPage.LoginFailedPage;
@@ -46,6 +47,7 @@ public class WicketApplication extends AuthenticatedWebApplication  {
         usePage("/login_failed", LoginFailedPage.class);
         usePage("/logout_success", LogoutSuccessPage.class);
         usePage("/home", HomePage.class);
+        usePage("/admin_dashboard", AdminDashboardPage.class);
         usePage("/users", UsersPage.class);
     }
 
