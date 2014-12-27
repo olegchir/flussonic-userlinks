@@ -20,6 +20,8 @@
     <wicket.version>7.0.0-M4</wicket.version>
     <spring.version>4.1.3.RELEASE</spring.version>
     <spring.security.version>3.2.5.RELEASE</spring.security.version>
+    <h2.version>1.4.184</h2.version>
+    <hiberante.version>4.3.7.Final</hiberante.version>
     <log4j.version>1.2.17</log4j.version>
     <log4j.slf4j.version>1.7.5</log4j.slf4j.version>
     <junit.version>4.11</junit.version>
@@ -108,6 +110,27 @@
       <artifactId>spring-security-config</artifactId>
       <version>${spring.security.version}</version>
     </dependency>
+
+    <!-- Database -->
+
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      <version>${h2.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-entitymanager</artifactId>
+      <version>${hiberante.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>${hiberante.version}</version>
+    </dependency>
+
 
     <!--Logging-->
 
