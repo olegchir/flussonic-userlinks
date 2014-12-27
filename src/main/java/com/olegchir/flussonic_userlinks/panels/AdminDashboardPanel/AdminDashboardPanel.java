@@ -17,6 +17,5 @@ import org.apache.wicket.model.Model;
 public class AdminDashboardPanel extends BasePanel {
     public AdminDashboardPanel(String id) {
         super(id);
-        add(new Label("replaceme", new Model<String>("some replaced text")));
     }
 }
