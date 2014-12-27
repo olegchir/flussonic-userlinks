@@ -7,6 +7,8 @@ package com.olegchir.flussonic_userlinks.page.BodyPage;
 
 import com.olegchir.flussonic_userlinks.page.BasePage.BasePage;
 import com.olegchir.flussonic_userlinks.panels.EmptyPanel.ULEmptyPanel;
+import com.olegchir.flussonic_userlinks.panels.sidebar.LinkToAdminDashboardPanel.LinkToAdminDashboardPanel;
+import com.olegchir.flussonic_userlinks.panels.sidebar.LinkToDashboard.LinkToDashboardPanel;
 import org.apache.wicket.authroles.authorization.strategies.role.annotations.AuthorizeInstantiation;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 import org.apache.wicket.markup.html.panel.Panel;
@@ -23,6 +25,8 @@ abstract public class BodyPage extends BasePage {
     public BodyPage(PageParameters params) {
         super(params);
         add(getContentPanel());
+        add(new LinkToAdminDashboardPanel("linkToAdminDashboard"));
+        add(new LinkToDashboardPanel("linkToDashboard"));
     }
 
     public Panel getContentPanel() {
