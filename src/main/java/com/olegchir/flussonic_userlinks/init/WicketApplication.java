@@ -42,6 +42,12 @@ public class WicketApplication extends AuthenticatedWebApplication  {
     @Override
     public void init() {
         super.init();
+
+        //Strip annoying Wicket markup, even in development mode
+        //It's REQUIRED for correct operation of CSS styles in UI
+        //https://cwiki.apache.org/confluence/display/WICKET/How+to+remove+wicket+markup+from+output
+        getMarkupSettings().setStripWicketTags(true);
+
         getComponentInstantiationListeners().add(new SpringComponentInjector(this));
         getSecuritySettings().setAuthorizationStrategy(new AnnotationsRoleAuthorizationStrategy(this));
         usePage("/login", LoginPage.class);
