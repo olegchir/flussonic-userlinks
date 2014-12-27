@@ -1,4 +1,4 @@
-package com.olegchir.flussonic_userlinks.helpers;
+package com.olegchir.flussonic_userlinks.database;
 /**
  * Copyright (C) 2014 Oleg Chirukhin
  * Licensed under the Apache License 2.0,

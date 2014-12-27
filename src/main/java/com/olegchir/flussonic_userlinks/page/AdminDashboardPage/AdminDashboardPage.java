@@ -5,19 +5,13 @@ package com.olegchir.flussonic_userlinks.page.AdminDashboardPage;
  * see LICENSE-2.0.txt, LICENSE (it's a copy of LICENSE-2.0.txt) and NOTICE for additional information.
  */
 
-import com.olegchir.flussonic_userlinks.helpers.DB;
+import com.olegchir.flussonic_userlinks.database.DB;
 import com.olegchir.flussonic_userlinks.model.Test;
 import com.olegchir.flussonic_userlinks.page.BodyPage.BodyPage;
 import com.olegchir.flussonic_userlinks.panels.AdminDashboardPanel.AdminDashboardPanel;
-import com.olegchir.flussonic_userlinks.panels.HomePanel.HomePanel;
 import org.apache.wicket.authroles.authorization.strategies.role.annotations.AuthorizeInstantiation;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
-
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
-import javax.persistence.Persistence;
 
 /**
  * Created by olegchir on 24.12.14.

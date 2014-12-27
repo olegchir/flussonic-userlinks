@@ -4,7 +4,7 @@ package com.olegchir.flussonic_userlinks.panels.AdminDashboardPanel;
  * Licensed under the Apache License 2.0,
  * see LICENSE-2.0.txt, LICENSE (it's a copy of LICENSE-2.0.txt) and NOTICE for additional information.
  */
-import com.olegchir.flussonic_userlinks.panels.BasePanel.AuthorizeViewContentOnlyFor;
+import com.olegchir.flussonic_userlinks.auth.AuthorizeViewContentOnlyFor;
 import com.olegchir.flussonic_userlinks.panels.BasePanel.BasePanel;
 
 

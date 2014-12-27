@@ -1,4 +1,4 @@
-package com.olegchir.flussonic_userlinks.helpers;
+package com.olegchir.flussonic_userlinks.auth;
 /**
  * Copyright (C) 2014 Oleg Chirukhin
  * Licensed under the Apache License 2.0,
@@ -6,11 +6,9 @@ package com.olegchir.flussonic_userlinks.helpers;
  */
 
 
-import com.olegchir.flussonic_userlinks.panels.BasePanel.AuthorizeViewContentOnlyFor;
 import com.olegchir.flussonic_userlinks.panels.EmptyPanel.ULEmptyPanel;
 import org.apache.wicket.Component;
 import org.apache.wicket.authroles.authorization.strategies.role.Roles;
-import org.apache.wicket.markup.html.panel.EmptyPanel;
 import org.apache.wicket.markup.html.panel.Panel;
 
 /**

@@ -9,13 +9,11 @@ package com.olegchir.flussonic_userlinks.init;
 /**
  * Created by olegchir on 25.12.14.
  */
-import com.olegchir.flussonic_userlinks.helpers.AuthChecker;
+import com.olegchir.flussonic_userlinks.auth.AuthChecker;
 import org.apache.wicket.authroles.authentication.AuthenticatedWebSession;
 import org.apache.wicket.authroles.authorization.strategies.role.Roles;
 import org.apache.wicket.request.Request;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.context.SecurityContextHolder;
+
 @SuppressWarnings("serial")
 public class UserAuthenticatedWebSession extends AuthenticatedWebSession {
     public UserAuthenticatedWebSession(Request request) {

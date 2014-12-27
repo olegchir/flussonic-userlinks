@@ -1,4 +1,4 @@
-package com.olegchir.flussonic_userlinks.panels.BasePanel;
+package com.olegchir.flussonic_userlinks.auth;
 /**
  * Copyright (C) 2014 Oleg Chirukhin
  * Licensed under the Apache License 2.0,

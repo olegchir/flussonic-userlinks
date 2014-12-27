@@ -9,6 +9,8 @@ package com.olegchir.flussonic_userlinks.init;
 /**
  * Created by olegchir on 25.12.14.
  */
+import com.olegchir.flussonic_userlinks.auth.AuthSuccessHandler;
+import com.olegchir.flussonic_userlinks.auth.CsrfTokenFilter;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

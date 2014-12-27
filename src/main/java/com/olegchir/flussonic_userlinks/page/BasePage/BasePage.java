@@ -5,13 +5,12 @@ package com.olegchir.flussonic_userlinks.page.BasePage;
  * see LICENSE-2.0.txt, LICENSE (it's a copy of LICENSE-2.0.txt) and NOTICE for additional information.
  */
 
-import com.olegchir.flussonic_userlinks.helpers.ComponentAuth;
+import com.olegchir.flussonic_userlinks.auth.ComponentAuth;
 import com.olegchir.flussonic_userlinks.panels.EmptyPanel.ULEmptyPanel;
 import com.olegchir.flussonic_userlinks.panels.NotificationPanel.NotificationPanel;
 import com.olegchir.flussonic_userlinks.panels.NotificationPanel.NotificationPanelType;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
-import org.apache.wicket.markup.html.panel.EmptyPanel;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.StringResourceModel;
